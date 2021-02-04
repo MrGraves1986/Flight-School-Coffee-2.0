@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}"> 
+</head>
+<body>
+    <h1>Flight School Coffee Roasters</h1>
+    <h2>"Helping people pro-caffeinate since 2013"</h2>
+    <button>
+        <a class="btn" href="/">Home</a>
+    </button>  
+    <button>
+        <a class="btn" href="/about_us">About Us</a>
+    </button>  
+    <button>
+        <a href="/current_roasts">Current Roasts</a>
+    </button>
+    <button>
+        <a href="/upcoming_roasts">Upcoming Roasts</a>
+    </button>
+    <button>
+        <a href="/my_cart">My Cart</a>
+    </button>
+    <img id="Coffee3" src= "{% static 'img/Coffee1.jpg' %}"/>
+</body>
+</html>    
