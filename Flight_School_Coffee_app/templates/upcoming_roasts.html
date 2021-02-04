@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight School Coffee | Upcoming Roasts</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style_revans.css' %}">
+</head>
+<body>
+    <div id="container">
+        <div id="content">
+            <h1>Upcoming Roasts</h1>
+            {% for roast in upcoming_roasts.all %}
+                <a href="/{{roast.id}}/view_roast"><img class="roast-image" src="{% static 'img/coffee_beans.jpg' %}"></a>
+                <div class="description-box w100">
+                    <h2><a class="text-link" href="/{{roast.id}}/view_roast">{{roast.name}}</a></h2>
+                    <p>{{roast.description}}</p>
+                    <p>${{roast.price}}/lb.</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

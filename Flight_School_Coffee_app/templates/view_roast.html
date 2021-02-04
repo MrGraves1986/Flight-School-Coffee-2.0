@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight School Coffee | Current Roasts</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style_revans.css' %}">
+</head>
+<body>
+    <div id="container">
+        <div id="content">
+            <a href="/{{this_roast.status}}_roasts">Back</a>
+            <h1>{{this_roast.name}}</h1>
+            <img class="roast-image" src="{% static 'img/coffee_beans.jpg' %}">
+            <div class="description-box w100">
+                <p>{{this_roast.description}}</p>
+                <p>${{this_roast.price}}/lb.</p>
+            </div>
+            {% if this_roast.status == "current" %}
+                <form action="add_to_cart" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="ordered_coffee" value="{{this_roast.id}}">
+                    <input type="hidden" name="cost" value="{{this_roast.price}}">
+                    <label for="ordered_style">Style:</label>
+                    <select name="ordered_style" id="ordered_style">
+                        <option>Choose:</option>
+                        {% for style in all_styles %}
+                            <option value="{{style.id}}">{{style.style_name}}</option>
+                        {% endfor %}
+                    </select><br>
+                    <label for="ordered_style">Style:</label>
+                    <select name="ordered_size" id="ordered_size">
+                        <option>Choose:</option>
+                        {% for size in all_sizes %}
+                            <option value="{{size.id}}">{{size.order_size}} lbs</option>
+                        {% endfor %}
+                    </select><br>
+                    <button type="submit">Add to Cart</button>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

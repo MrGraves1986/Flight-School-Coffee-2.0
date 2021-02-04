@@ -1,0 +1,33 @@
+#container{
+    width: 100%;
+    margin: 0 auto;
+}
+#content{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+}
+.roast-image{
+    width: 200px;
+    height: auto;
+    display: inline-block;
+    border: none;
+}
+.description-box{
+    width: 500px;
+    max-width: 500px;
+    padding: 10px 20px 30px 20px;
+    display: inline-block;
+    text-align: left;
+}
+.text-link{
+    color:black;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 480px){
+    .w100{
+        width: 100% !important;
+    }
+}
