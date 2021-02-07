@@ -8,22 +8,39 @@
     <link rel="stylesheet" href="{% static 'css/index.css' %}"> 
 </head>
 <body>
-    <h1>Meet Tom & Jen</h1>
-    <button>
-        <a class="btn" href="/">Home</a>
-    </button>  
-    <button>
-        <a class="btn" href="/about_us">About Us</a>
-    </button>  
-    <button>
-        <a href="/current_roasts">Current Roasts</a>
-    </button>
-    <button>
-        <a href="/upcoming_roasts">Upcoming Roasts</a>
-    </button>
-    <button>
-        <a href="/my_cart">My Cart</a>
-    </button>
-    <img id="Coffee3" src= "{% static 'img/Coffee5.jpg' %}"/>
-    <a href="/contact_us">Contact Us</a>
-    <p>Flight School Coffee Roasters was founded in 2013 by the dynamic duo known as Tom & Jennifer Pekar. Tom is a Texas A&M graduate, class of 1985, and has always enjoyed the art and science behind a great cup of coffee. Together with his wife Jennifer, he began experimenting and roasting his own beans, determined to to tease out all the complex flavors of every bean he comes by which is evidenced by his stellar product line. When asked why they go through so much trouble and pay attention to even the most minute detail when roasting, their answer was a proverbial reminder that can be applied to all aspects of life: "Well, anything worth doing correctly is worth overdoing."</p>
+    <div class="wrapper">
+        <div class="links">
+            <h1>Meet Tom & Jen</h1>
+            <button>
+                <a class="btn" href="/">Home</a>
+            </button>  
+            <button>
+                <a class="btn" href="/about_us">About Us</a>
+            </button>  
+            <button>
+                <a href="/current_roasts">Current Roasts</a>
+            </button>
+            <button>
+                <a href="/upcoming_roasts">Upcoming Roasts</a>
+            </button>
+            <button>
+                <a href="/my_cart">My Cart</a>
+            </button>
+            <button>
+                <a href="/contact_us">Contact Us</a>
+            </button>
+        </div>
+        <br><br>
+        <div id="about_pics">    
+            <img id="coffee5" src= "{% static 'img/Coffee5.jpg' %}"/>
+            <br>
+            <img id="coffee3" src= "{% static 'img/Coffee3.jpg' %}"/>
+        </div>
+        <div id="about">
+            <p>Flight School Coffee Roasters was founded in 2013 by the dynamic duo known as Tom & Jennifer Pekar. Tom is a Texas A&M graduate, class of 1985, and has always enjoyed the art and science behind a great cup of coffee. Together with his wife Jennifer, he began experimenting and roasting his own beans, determined to to tease out all the complex flavors of every bean he comes by which is evidenced by his stellar product line. When asked why they go through so much trouble and pay attention to even the most minute detail when roasting, their answer was a proverbial reminder that can be applied to all aspects of life: "Well, anything worth doing correctly is worth overdoing".</p>
+            <p>Tom & Jen's love for what they do is evident in every drop of their delicious coffee and they can't wait to share some of that love with you. Cruise on over to the "Current Roasts" page to see what they're roasting with you in mind.</p>
+        </div>
+        <!-- <img id="coffee3" src= "{% static 'img/Coffee3.jpg' %}"/>     -->
+    </div>
+</body>
+</html>    

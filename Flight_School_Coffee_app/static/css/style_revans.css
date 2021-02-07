@@ -1,6 +1,11 @@
 #container{
     width: 100%;
     margin: 0 auto;
+    background-color: maroon;
+    background: url('/static/img/coffee_beans.jpg');
+    /* height: 690px; */
+    height: 980px;
+    border: 3px solid black;
 }
 #content{
     width: 100%;
@@ -30,4 +35,19 @@
     .w100{
         width: 100% !important;
     }
+}
+
+h1  {
+    color:white;
+    background-color: maroon;
+    text-align: center;
+    font-size: xxx-large;
+}
+
+.links {
+    text-align: center;
+}
+
+a {
+    font-size: 24px;
 }

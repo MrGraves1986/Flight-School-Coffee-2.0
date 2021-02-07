@@ -1,0 +1,131 @@
+.wrapper {
+    background: url('/static/img/coffee_beans.jpg');
+    width: 100%;
+    /* height: 690px; */
+    height: auto;
+    border: 3px solid black;
+    
+}
+
+h1  {
+    color:white;
+    background-color: maroon;
+    text-align: center;
+    font-size: xxx-large;
+
+}
+
+h2 {
+    text-align: center;
+    background-color: maroon;
+    color: white;
+    font-size: xx-large;
+    font-style: italic;
+}
+
+a {
+    font-size: 24px;
+}
+
+#coffee4 {
+    height: 465px;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  
+
+}
+
+.links {
+    text-align: center;
+}
+
+#coffee5, #coffee3 {
+    width: 350px;
+    height: 250px;
+    vertical-align: top;
+    display: block;
+}
+
+#coffee5 {
+    display: block;
+}
+
+#about {
+    display: inline-block;
+    width: 350px;
+    background-color: white;
+    text-align: center;
+    margin-left: 200px;
+    width: 630px;
+    vertical-align: top;
+}
+
+#about_pics {
+    display: inline-block;
+    margin-left: 78px;
+}
+
+p   {
+    margin-top: 0px;
+    font-size: 24px;
+}
+
+#contact_desc {
+    display: inline-block;
+    background-color: maroon;
+    border-style: solid;
+    vertical-align: top;
+}
+
+.contact_info {
+    font-size: 18px;
+    text-align: center;
+    background-color: maroon;
+    color: white;
+    font-size: xx-large;
+    margin: 0px;
+}
+
+#reg_form {
+    display: inline-block;
+}
+
+#contact_form {
+    width: 530px;
+    display: inline-block;
+    background-color: maroon;
+    font-size: 24px;
+    /* margin: auto; */
+    width: 50%;
+    border: 3px solid black;
+    padding: 10px;
+    margin-left: 50px;
+    color: white;
+}
+
+
+.form_input {
+    display: block;
+    font-size: 24px;
+}
+
+#portal_submit {
+    font-size: 24px;
+}
+
+textarea.form_input {
+    width: 524px;
+}
+
+/* #coffee4 {
+    width: 350px;
+    display: inline-block;
+    margin-left: 50px;
+    height: 290px;
+    animation: fadeIn ease 5s;
+    -webkit-animation: fadeIn ease 5s;
+    -moz-animation: fadeIn ease 5s;
+    -o-animation: fadeIn ease 5s;
+    -ms-animation: fadeIn ease 5s;   
+} */

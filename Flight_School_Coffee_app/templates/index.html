@@ -8,23 +8,33 @@
     <link rel="stylesheet" href="{% static 'css/index.css' %}"> 
 </head>
 <body>
-    <h1>Flight School Coffee Roasters</h1>
-    <h2>"Helping people pro-caffeinate since 2013"</h2>
-    <button>
-        <a class="btn" href="/">Home</a>
-    </button>  
-    <button>
-        <a class="btn" href="/about_us">About Us</a>
-    </button>  
-    <button>
-        <a href="/current_roasts">Current Roasts</a>
-    </button>
-    <button>
-        <a href="/upcoming_roasts">Upcoming Roasts</a>
-    </button>
-    <button>
-        <a href="/my_cart">My Cart</a>
-    </button>
-    <img id="Coffee3" src= "{% static 'img/Coffee1.jpg' %}"/>
+    <div class="wrapper">
+        <h1>Flight School Coffee Roasters</h1>
+        <div class="links">
+            <button>
+                <a class="btn" href="/">Home</a>
+            </button>  
+            <button>
+                <a class="btn" href="/about_us">About Us</a>
+            </button>  
+            <button>
+                <a class="btn" href="/current_roasts">Current Roasts</a>
+            </button>
+            <button>
+                <a class="btn" href="/upcoming_roasts">Upcoming Roasts</a>
+            </button>
+            <button>
+                <a class="btn" href="/my_cart">My Cart</a>
+            </button>
+            <button>
+                <a class="btn" href="/contact_us">Contact Us</a>
+            </button>
+        </div>
+        <br><br>
+        <div id="img1">
+            <img id="coffee4" src= "{% static 'img/Coffee4.jpg' %}"/>
+        </div>
+        <h2>"Helping people pro-caffeinate since 2013!"</h2>
+    </div>    
 </body>
 </html>    
