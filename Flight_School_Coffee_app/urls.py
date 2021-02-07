@@ -9,4 +9,6 @@ urlpatterns = [
     path('upcoming_roasts', views.upcoming_roasts),
     path('<int:roast_id>/view_roast', views.view_roast),
     path('<int:roast_id>/add_to_cart', views.add_to_cart),
+    path('submit_mail', views.submit_mail),
+    path('back_home', views.back_home),
 ]

@@ -4,14 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
 <body>
-    <h1>We'd love to hear from you!</h1>
-    <h2>Flight School Coffee Roasters</h2>
-    <h3>503 McKeever, Hangar A5</h3>
-    <h3>Arcola, TX 77583</h3>
-    <br>
-    <h3>281.431.4040</h3>
+    <div class="wrapper">
+        <h1>We'd Love to Hear From You!</h1>
+        <div class="links">
+            <button>
+                <a class="btn" href="/">Home</a>
+            </button>  
+            <button>
+                <a class="btn" href="/about_us">About Us</a>
+            </button>  
+            <button>
+                <a class="btn" href="/current_roasts">Current Roasts</a>
+            </button>
+            <button>
+                <a class="btn" href="/upcoming_roasts">Upcoming Roasts</a>
+            </button>
+            <button>
+                <a class="btn" href="/my_cart">My Cart</a>
+            </button>
+            <button>
+                <a class="btn" href="/contact_us">Contact Us</a>
+            </button>
+        </div>
+        <br><br><br>
+        <div id="contact_desc">
+            <h2 class="contact_info">Flight School Coffee Roasters</h2>
+            <h3 class="contact_info">503 McKeever, Hangar A5</h3>
+            <h3 class="contact_info">Arcola, TX 77583</h3>
+            <br>
+            <h3 class="contact_info">281.431.4040</h3>
+        </div>
+        <!-- <form id="formcontent" action="/contact_form" method="post"> -->
+            <!-- {% csrf_token %}
+            {{ form.as_p }} -->
+            <div id="contact_form">
+                First Name: <input class="form_input" type="text" name="first">
+                Last Name: <input class="form_input"type="text" name="last">
+                Email: <input class="form_input"type="text" name="last">
+                <br>
+                <textarea class="form_input" name="content" cols="22" rows="10"></textarea>
+                <br>
+                <a href="/submit_mail"><input id="portal_submit" type="submit" 
+                value="Send"></a>
+            </div>   
+        </form>
+    </div>    
     
 </body>
 </html>

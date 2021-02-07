@@ -45,3 +45,9 @@ def add_to_cart(request, roast_id):
         return redirect('/current_roasts')
     else:
         return redirect(f'/{roast_id}/view_roast')
+
+def submit_mail(request):
+    return render (request, "success.html")
+
+def back_home(request):
+    return render (request, "index.html")

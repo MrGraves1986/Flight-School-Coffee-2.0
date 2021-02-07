@@ -9,8 +9,29 @@
 </head>
 <body>
     <div id="container">
+        <h1>Upcoming Roasts</h1>
+        <div class="links">
+            <button>
+                <a class="btn" href="/">Home</a>
+            </button>  
+            <button>
+                <a class="btn" href="/about_us">About Us</a>
+            </button>  
+            <button>
+                <a class="btn" href="/current_roasts">Current Roasts</a>
+            </button>
+            <button>
+                <a class="btn" href="/upcoming_roasts">Upcoming Roasts</a>
+            </button>
+            <button>
+                <a class="btn" href="/my_cart">My Cart</a>
+            </button>
+            <button>
+                <a class="btn" href="/contact_us">Contact Us</a>
+            </button>
+        </div>
         <div id="content">
-            <h1>Upcoming Roasts</h1>
+            <!-- <h1>Upcoming Roasts</h1> -->
             {% for roast in upcoming_roasts.all %}
                 <a href="/{{roast.id}}/view_roast"><img class="roast-image" src="{% static 'img/coffee_beans.jpg' %}"></a>
                 <div class="description-box w100">
