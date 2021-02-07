@@ -2,7 +2,8 @@
     width: 100%;
     margin: 0 auto;
     background-color: maroon;
-    background: url('/static/img/coffee_beans.jpg');
+    background: url('/static/img/background-roasted-fresh-brown-coffee-beans-perfect-cool-wallpaper.jpg');
+    background-size: cover;
     /* height: 690px; */
     height: 980px;
     border: 3px solid black;
