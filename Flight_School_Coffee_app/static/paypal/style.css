@@ -1,0 +1,10 @@
+body{
+    background: url('/static/paypal/img/background-roasted-fresh-brown-coffee-beans-perfect-cool-wallpaper.jpg');
+    background-size: cover;
+}
+
+.prod_img{
+    max-width: 228px;
+    max-height: 346px;
+    box-shadow: 0 2px 5px 1px rgba(0,0,0,.2);
+}

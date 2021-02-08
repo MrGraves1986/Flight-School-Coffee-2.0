@@ -2,6 +2,12 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import Coffees, Sizes, Styles, Customers, SingleCartItems, TotalCartItems
 
+# mira add on's
+from django.http import JsonResponse
+import json
+from .models import Product, Order
+###
+
 def index(request):
     return render(request,'index.html')
 
@@ -51,3 +57,27 @@ def submit_mail(request):
 
 def back_home(request):
     return render (request, "index.html")
+
+
+# paypal
+def store(request):
+	products = Product.objects.all()
+	context = {'products':products}
+
+	return render(request, 'paypal/store.html', context)
+
+def checkout(request, pk):
+	product = Product.objects.get(id=pk)
+	context = {'product':product}
+	
+	return render(request, 'paypal/checkout.html', context)
+
+def paymentComplete(request):
+	body = json.loads(request.body)
+	print('BODY:', body)
+	product = Product.objects.get(id=body['productId'])
+	Order.objects.create(
+		product=product
+		)
+
+	return JsonResponse('Payment completed!', safe=False)
