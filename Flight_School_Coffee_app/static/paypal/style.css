@@ -8,3 +8,33 @@ body{
     max-height: 346px;
     box-shadow: 0 2px 5px 1px rgba(0,0,0,.2);
 }
+
+h1  {
+    color:white;
+    background-color: maroon;
+    text-align: center;
+    font-size: xxx-large;
+    margin-top: 50px;
+}
+
+a:not(.btn) {
+    font-size: 24px;
+    color: maroon;
+    text-decoration: underline;
+}
+
+a:hover{
+    color: maroon;
+}
+
+.links {
+    text-align: center;
+}
+
+.links button:hover{
+    background-color: rgb(228, 228, 228);
+}
+
+.card:not(.checkout){
+    background-color: blanchedalmond;
+}
