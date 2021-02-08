@@ -11,4 +11,9 @@ urlpatterns = [
     path('<int:roast_id>/add_to_cart', views.add_to_cart),
     path('submit_mail', views.submit_mail),
     path('back_home', views.back_home),
+
+    # paypal
+    path('store/', views.store, name="store"),
+    path('checkout/<int:pk>/', views.checkout, name="checkout"),
+    path('complete/', views.paymentComplete, name="complete"),
 ]

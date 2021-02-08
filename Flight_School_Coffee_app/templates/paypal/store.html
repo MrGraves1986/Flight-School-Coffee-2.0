@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Store</title>
+	<meta id="meta" name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	{% load static %}
+	<link rel="stylesheet" type='text/css' href="{% static '/paypal/style.css' %}">
+
+
+</head>
+<body>
+	<div class="wrapper">
+        <div class="links">
+            <h1>Store</h1>
+            <button>
+                <a href="/">Home</a>
+            </button>  
+            <button>
+                <a href="/about_us">About Us</a>
+            </button>  
+            <button>
+                <a href="/current_roasts">Current Roasts</a>
+            </button>
+            <button>
+                <a href="/upcoming_roasts">Upcoming Roasts</a>
+            </button>
+            <!-- <button>
+                <a href="/my_cart">My Cart</a>
+            </button> -->
+            <button>
+                <a href="/store">Store</a>
+            </button>
+            <button>
+                <a href="/contact_us">Contact Us</a>
+            </button>
+        </div>
+	<div class="container">
+		<div class="row">
+			{% for product in products %}
+
+				<div class="col-lg-6">
+					<br>
+					<div class="card card-body">
+						<h4>{{product.name}}</h4>
+						<img class = 'prod_img' src={{product.image_url}}>
+						<hr>
+						<p>{{product.description}}</p>
+						<hr>
+						<h4>${{product.price}}</h4>
+						<hr>
+						<a target="_blank" class="btn btn-sm btn-warning" href="{% url 'checkout' product.id  %}">Buy Now</a>
+					</div>
+				</div>
+
+			{% endfor %}
+		</div>
+	</div>
+</body>
+</html>
