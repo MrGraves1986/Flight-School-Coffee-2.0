@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import Coffees, Sizes, Styles, Customers, SingleCartItems, TotalCartItems
 
+
 # mira add on's
 from django.http import JsonResponse
 import json
@@ -42,6 +43,7 @@ def add_to_cart(request, roast_id):
         cost = request.POST['cost']
         per_pound = Sizes.objects.get(id=request.POST['ordered_size'])
         order_price = cost * per_pound.order_size
+
         SingleCartItems.objects.create(
             ordered_coffee=Coffees.objects.get(id=request.POST['ordered_coffee']),
             ordered_style=Styles.objects.get(id=request.POST['ordered_style']),

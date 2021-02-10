@@ -13,12 +13,15 @@
     margin: 0 auto;
     max-width: 800px;
     text-align: center;
+    background-color: white;
+    /* height: 470px; */
 }
 .roast-image{
     width: 200px;
     height: auto;
     display: inline-block;
     border: none;
+    margin: 28px;
 }
 .description-box{
     width: 500px;
@@ -26,9 +29,10 @@
     padding: 10px 20px 30px 20px;
     display: inline-block;
     text-align: left;
+    vertical-align: top;
 }
 .text-link{
-    color:black;
+    color:blue;
     text-decoration: none;
 }
 
@@ -51,4 +55,17 @@ h1  {
 
 a {
     font-size: 24px;
+}
+
+#roast_content {
+    height: 470px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+    background-color: white;
+}
+
+#roast_label {
+    font-size: 18px;
 }

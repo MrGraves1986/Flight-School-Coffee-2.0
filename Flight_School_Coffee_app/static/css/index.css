@@ -130,3 +130,7 @@ textarea.form_input {
     -o-animation: fadeIn ease 5s;
     -ms-animation: fadeIn ease 5s;   
 } */
+
+#admin_link {
+    color: white;
+}

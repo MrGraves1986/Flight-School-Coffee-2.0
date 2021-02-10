@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="container">
-        <div id="content">
+        <div id="roast_content">
             <a href="/{{this_roast.status}}_roasts">Back</a>
             <h1>{{this_roast.name}}</h1>
             <img class="roast-image" src="{% static 'img/coffee_beans.jpg' %}">
@@ -28,14 +28,16 @@
                         {% for style in all_styles %}
                             <option value="{{style.id}}">{{style.style_name}}</option>
                         {% endfor %}
-                    </select><br>
-                    <label for="ordered_style">Style:</label>
+                    </select>
+                    <br><br>
+                    <label for="ordered_style">Size:</label>
                     <select name="ordered_size" id="ordered_size">
                         <option>Choose:</option>
                         {% for size in all_sizes %}
                             <option value="{{size.id}}">{{size.order_size}} lbs</option>
                         {% endfor %}
-                    </select><br>
+                    </select>
+                    <br><br>
                     <button type="submit">Add to Cart</button>
                 </form>
             {% endif %}
