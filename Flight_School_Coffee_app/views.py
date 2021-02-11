@@ -19,14 +19,16 @@ def about_us(request):
      return render(request, 'about.html')
 
 def current_roasts(request):
+    coffee=Coffees.objects.filter(status="Current")
     context = {
-        'current_roasts':Coffees.objects.filter(status="current")
+        'current_roasts':coffee
     }
     return render(request, 'current_roasts.html', context)
 
 def upcoming_roasts(request):
+    coffee=Coffees.objects.filter(status="Upcoming")
     context = {
-        'upcoming_roasts':Coffees.objects.filter(status="upcoming")
+        'upcoming_roasts':coffee
     }
     return render(request, 'upcoming_roasts.html', context)
 

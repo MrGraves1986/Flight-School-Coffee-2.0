@@ -10,14 +10,19 @@
 <body>
     <div id="container">
         <div id="roast_content">
-            <a href="/{{this_roast.status}}_roasts">Back</a>
+            {% if this_roast.status == "Current" %}
+                <a href="/current_roasts">Back</a>
+            {% endif %}
+            {% if this_roast.status == "Upcoming" %}
+                <a href="/upcoming_roasts">Back</a>
+            {% endif %}    
             <h1>{{this_roast.name}}</h1>
             <img class="roast-image" src="{% static 'img/coffee_beans.jpg' %}">
             <div class="description-box w100">
                 <p>{{this_roast.description}}</p>
                 <p>${{this_roast.price}}/lb.</p>
             </div>
-            {% if this_roast.status == "current" %}
+                {% if this_roast.status == "Current" %}
                 <form action="add_to_cart" method="POST">
                     {% csrf_token %}
                     <input type="hidden" name="ordered_coffee" value="{{this_roast.id}}">
@@ -40,7 +45,7 @@
                     <br><br>
                     <button type="submit">Add to Cart</button>
                 </form>
-            {% endif %}
+                {% endif %}   
         </div>
     </div>
 </body>
