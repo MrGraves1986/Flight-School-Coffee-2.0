@@ -69,3 +69,9 @@ a {
 #roast_label {
     font-size: 18px;
 }
+
+.roast_img {
+    height: 130px;
+    margin-top: 15px;
+    width:160px;
+}
