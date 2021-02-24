@@ -33,12 +33,13 @@
                 <a class="btn" href="/contact_us">Contact Us</a>
             </button>
         </div>
+        <br><br>
         <div id="content">
             <!-- <h1>Upcoming Roasts</h1> -->
-                {% for roast in upcoming_roasts %}
-                    <a href="/{{roast.id}}/view_roast"><img class="roast-image" src="{% static 'img/coffee_beans.jpg' %}"></a>
+                {% for roast in upcoming_roasts.all %}
+                        <img class = 'roast_img' src={{roast.image_url}}>
                     <div class="description-box w100">
-                        <h2><a class="text-link" href="/{{roast.id}}/view_roast">{{roast.name}}</a></h2>
+                        <h2>{{roast.name}}</h2>
                         <p>{{roast.description}}</p>
                         <p>${{roast.price}}/lb.</p>
                     </div>

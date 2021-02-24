@@ -17,7 +17,7 @@
                 <a href="/upcoming_roasts">Back</a>
             {% endif %}    
             <h1>{{this_roast.name}}</h1>
-            <img class="roast-image" src="{% static 'img/coffee_beans.jpg' %}">
+            <img class = 'roast_img' src={{this_roast.image_url}}>
             <div class="description-box w100">
                 <p>{{this_roast.description}}</p>
                 <p>${{this_roast.price}}/lb.</p>
